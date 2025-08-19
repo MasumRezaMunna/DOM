@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour-of-DOM</title>
+    <style>
+        h1{
+            color: gold;
+        }
+        #Food-title{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>This is my header no banner</h1>
+    </header>
+    <section>
+        <h1>Welcome to my DOM</h1>
+    <ul>
+        <li>Shafayet</li>
+        <li>Bonobash</li>
+        <li id="band">Jalali Set</li>
+    </ul>
+    </section>
+    <section>
+        <h1 id="Food-title">
+            Foods I love
+        </h1>
+        <ul>
+            <li>Rice</li>
+            <li>Potato</li>
+            <li>Fish</li>
+            <li>Lentils</li>
+            <li>Burger</li>
+            <li>Pizza</li>
+            <li>Pasta</li>
+        </ul>
+    </section>
+    <script>
+        // console.log('hello from inside')
+
+        const student = {
+            name: 'Abul mia',
+            id: 121,
+            study: function(subject){
+                // console.log('Studying subject:', subject);
+            }
+        }
+
+        const liCollection = document.getElementsByTagName('li');
+        // console.log(liCollection);
+
+        for(const li of liCollection){
+            // console.log(li.innerText)
+        }
+        const allHeading = document.getElementsByTagName('h1');
+        for(const heading of allHeading){
+            // console.log(heading.innerText)
+        }
+
+        const foodTitleH1 = document.getElementById('Food-title');
+        console.log(foodTitleH1.innerText)
+        foodTitleH1.innerText = 'Food I loved to eat';
+
+        const bandElement = document.getElementById('band');
+        console.log(bandElement)
+        bandElement.innerText = 'jalali ken'
+    </script>
+</body>
+</html>
