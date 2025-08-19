@@ -30,12 +30,12 @@
             Foods I love
         </h1>
         <ul>
-            <li>Rice</li>
-            <li>Potato</li>
-            <li>Fish</li>
-            <li>Lentils</li>
-            <li>Burger</li>
-            <li>Pizza</li>
+            <li class="foreign">Rice</li>
+            <li class="foreign">Potato</li>
+            <li class="foreign">Fish</li>
+            <li class="foreign">Lentils</li>
+            <li class="foreign">Burger</li>
+            <li class="foreign">Pizza</li>
             <li>Pasta</li>
         </ul>
     </section>
@@ -50,16 +50,23 @@
             }
         }
 
+        // all li tags
+
         const liCollection = document.getElementsByTagName('li');
         // console.log(liCollection);
 
         for(const li of liCollection){
             // console.log(li.innerText)
         }
+
+        // all h1 tags
+
         const allHeading = document.getElementsByTagName('h1');
         for(const heading of allHeading){
             // console.log(heading.innerText)
         }
+
+        // get elements by id
 
         const foodTitleH1 = document.getElementById('Food-title');
         console.log(foodTitleH1.innerText)
@@ -68,6 +75,15 @@
         const bandElement = document.getElementById('band');
         console.log(bandElement)
         bandElement.innerText = 'jalali ken'
+
+        // get elements by class name
+
+        const foreignElements = document.getElementsByClassName('foreign');
+        console.log(foreignElements);
+        for(const element of foreignElements){
+            console.log(element)
+        }
+
     </script>
 </body>
 </html>
